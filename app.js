@@ -1,5 +1,5 @@
 //Module
-var weatherApp = angular.module('weatherApp', ['ngRoute', 'ngResource']);
+let weatherApp = angular.module('weatherApp', ['ngRoute', 'ngResource']);
 
 //Routes
 
