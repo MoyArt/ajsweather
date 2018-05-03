@@ -1,0 +1,29 @@
+{
+  "name": "AJSWeatherApp",
+  "homepage": "https://github.com/MoyArt/ajsweather",
+  "authors": [
+    "MoyArt"
+  ],
+  "description": "",
+  "main": "",
+  "keywords": [
+    "Angular",
+    "WeatherApp",
+    "AngularJS",
+    "JS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "angular": "angularjs#^1.6.10",
+    "angular-route": "^1.6.10",
+    "angular-resource": "^1.6.10"
+  }
+}
