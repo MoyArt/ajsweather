@@ -6,10 +6,10 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{w.dt_txt}}</h3>
+                    <h3 class="panel-title">{{convertToDate(w.dt) | date: 'MMM d, y'}}</h3>
                 </div>
                 <div class="panel-body">
-                    <p>Temperatura del día: {{w.main.temp}}</p>
+                    <p>Temperatura del día: {{convertToCelsius(w.main.temp)}}º</p>
                 </div>
             </div>
         </div>
