@@ -33,7 +33,7 @@ weatherApp.controller('homeController', ['$scope', 'cityService', function($scop
 weatherApp.controller('forecastController', ['$scope', '$resource', 'cityService', function($scope, $resource, cityService){
     $scope.city = cityService.city;
     const API_KEY = '82a5a6d6813a18ef9d5f02be14c18dd1';
-    $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/weather?', {get:{method: 'JSONP'}});
-    $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, appid: API_KEY });
+    $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast?', {get:{method: 'JSONP'}});
+    $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, appid: API_KEY, cnt: 7 });
     console.log('mi objeto es' + $scope.weatherResult);
 }]);
