@@ -1,5 +1,6 @@
 //Module
 let weatherApp = angular.module('weatherApp', ['ngRoute', 'ngResource']);
+let weatherApiKey = ac4756a4e6f0981285e1a32d2686fdf8;
 
 //Routes
 
