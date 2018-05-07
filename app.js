@@ -1,6 +1,5 @@
 //Module
 let weatherApp = angular.module('weatherApp', ['ngRoute', 'ngResource']);
-let weatherApiKey = ac4756a4e6f0981285e1a32d2686fdf8;
 
 //Routes
 
@@ -19,7 +18,7 @@ weatherApp.config(function($routeProvider){
 //Services
 
 weatherApp.service('cityService', function(){
-    this.city = "New York, NY"
+    this.city = "London"
 })
 
 //Controllers
@@ -31,6 +30,10 @@ weatherApp.controller('homeController', ['$scope', 'cityService', function($scop
     })
 }]);
 
-weatherApp.controller('forecastController', ['$scope', 'cityService', function($scope, cityService){
+weatherApp.controller('forecastController', ['$scope', '$resource', 'cityService', function($scope, $resource, cityService){
     $scope.city = cityService.city;
+    const API_KEY = '82a5a6d6813a18ef9d5f02be14c18dd1';
+    $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/weather?', {get:{method: 'JSONP'}});
+    $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, appid: API_KEY });
+    console.log('mi objeto es' + $scope.weatherResult);
 }]);
