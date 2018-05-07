@@ -37,7 +37,7 @@ weatherApp.controller('homeController', ['$scope', 'cityService', function($scop
 weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams, cityService){
     const API_KEY = '82a5a6d6813a18ef9d5f02be14c18dd1';
     $scope.city = cityService.city;
-    $scope.days = $routeParams.days || 2;
+    $scope.days = $routeParams.days || '2';
     $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast?', {get:{method: 'JSONP'}});
     $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, appid: API_KEY, cnt: $scope.days });
     $scope.convertToCelsius = function(degk){
