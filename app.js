@@ -57,7 +57,10 @@ weatherApp.directive('weatherReport', function(){
         templateUrl: 'directives/weatherReport.html',
         replace: true,
         scope: {
-            
+            weatherDay: '=',
+            convertToStandar: '&',
+            convertToDate: '&',
+            dateFormat: '@'
         }
     }
 });
