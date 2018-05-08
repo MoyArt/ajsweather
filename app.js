@@ -41,7 +41,6 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
     $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast?', {get:{method: 'JSONP'}});
     $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, appid: API_KEY, cnt: $scope.days });
     $scope.convertToCelsius = function(degk){
-        debugger
         return (degk - 273).toFixed(2)
     }
     $scope.convertToDate = function(dt){
