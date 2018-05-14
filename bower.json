@@ -24,6 +24,7 @@
     "bootstrap": "^4.1.1",
     "angular": "angularjs#^1.6.10",
     "angular-route": "^1.6.10",
-    "angular-resource": "^1.6.10"
+    "angular-resource": "^1.6.10",
+    "components-font-awesome": "^5.0.6"
   }
 }
