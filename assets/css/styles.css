@@ -8,5 +8,9 @@ a.bg-primary.bg-p {
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
     background-color: #ddd;
-    box-shadow: 0 0 4px #555;
+    box-shadow: 0 0 4px #111;
+}
+
+.mainNav a{
+    color: #fff;
 }
