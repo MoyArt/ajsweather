@@ -59,7 +59,9 @@ weatherApp.directive('weatherReport', function(){
             weatherDay: '=',
             convertToStandar: '&',
             convertToDate: '&',
-            dateFormat: '@'
+            dateFormat: '@',
+            typeOfWeather: '@',
+            weatherDescription: '@'
         }
     }
 });
